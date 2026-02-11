@@ -1,0 +1,52 @@
+:root {
+    --gold: #D4AF37;
+    --dark-gold: #996515;
+    --cream: #FFFDF5;
+    --text-dark: #2c2c2c;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    background-color: var(--cream);
+    font-family: 'Montserrat', sans-serif;
+    color: var(--text-dark);
+    scroll-behavior: smooth;
+    text-align: center;
+    overflow-x: hidden;
+}
+
+/* Animasi Bunga 🌸 */
+.flower-container { position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 9999; }
+.petal { position: absolute; border-radius: 150% 0 150% 0; opacity: 0.7; animation: fall linear infinite; }
+@keyframes fall { 0% { transform: translateY(-10%) rotate(0deg); } 100% { transform: translateY(110vh) rotate(360deg); } }
+
+/* Hero */
+.hero { height: 100vh; background: url('https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1920&q=80') center/cover; position: relative; display: flex; align-items: center; justify-content: center; color: white; }
+.overlay { background: rgba(0,0,0,0.5); width: 100%; height: 100%; display: flex; flex-direction: column; justify-content: center; }
+.hero h1 { font-family: 'Great Vibes', cursive; font-size: 5rem; color: var(--gold); margin: 20px 0; }
+
+/* Countdown UI */
+#timer { display: flex; justify-content: center; gap: 10px; margin-top: 20px; }
+.time-box { background: linear-gradient(135deg, var(--gold), var(--dark-gold)); color: white; padding: 15px; border-radius: 12px; min-width: 75px; }
+.time-box span { font-size: 1.8rem; font-weight: bold; display: block; }
+.time-box p { font-size: 0.7rem; text-transform: uppercase; }
+
+/* General Section */
+.section { padding: 80px 20px; }
+.bg-white { background: white; border-radius: 50px 50px 0 0; }
+.title-gold { font-family: 'Playfair Display', serif; color: var(--dark-gold); font-size: 2.2rem; margin-bottom: 20px; }
+.map-container { max-width: 600px; margin: 20px auto; border: 3px solid var(--gold); border-radius: 20px; overflow: hidden; height: 350px; }
+.map-container iframe { width: 100%; height: 100%; border: 0; }
+
+/* Form & Button */
+.rsvp-card { max-width: 500px; margin: 0 auto; padding: 30px; border: 1px solid var(--gold); border-radius: 20px; }
+.form-group { text-align: left; margin-bottom: 15px; }
+.form-control { width: 100%; padding: 12px; margin-top: 5px; border: 1px solid #ddd; border-radius: 10px; }
+.btn-mewah { background: linear-gradient(135deg, var(--gold), var(--dark-gold)); color: white; border: none; padding: 15px; width: 100%; border-radius: 30px; font-weight: bold; cursor: pointer; }
+
+/* Floating Music */
+.music-control { position: fixed; bottom: 20px; right: 20px; background: var(--gold); width: 55px; height: 55px; border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer; z-index: 1000; box-shadow: 0 4px 15px rgba(0,0,0,0.3); }
+
+#qrcode { margin: 20px auto; border: 2px solid var(--gold); padding: 10px; display: inline-block; background: white; }
+.footer { padding: 40px; color: #888; font-size: 0.8rem; }

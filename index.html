@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Royal Wedding - Romeo & Juliet</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Great+Vibes&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+</head>
+<body>
+
+    <div class="flower-container" id="flowerContainer"></div>
+
+    <audio id="weddingMusic" loop>
+        <source src="https://www.bensound.com/bensound-music/bensound-love.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="clickSound">
+        <source src="https://assets.mixkit.co/active_storage/sfx/2568/2568-preview.mp3" type="audio/mpeg">
+    </audio>
+
+    <div class="music-control" onclick="toggleMusic()" id="musicBtn">🎵</div>
+
+    <section class="hero">
+        <div class="overlay">
+            <h3>THE WEDDING OF</h3>
+            <h1>Romeo & Juliet</h1>
+            <p class="date">03 . 04 . 2026</p>
+            <a href="#countdown" class="btn-scroll" onclick="playClick()">Buka Undangan 💼</a>
+        </div>
+    </section>
+
+    <section class="section bg-white" id="countdown">
+        <h2 class="title-gold">Menuju Hari Bahagia</h2>
+        <div id="timer">
+            <div class="time-box">
+                <span id="days">00</span>
+                <p>Hari</p>
+            </div>
+            <div class="time-box">
+                <span id="hours">00</span>
+                <p>Jam</p>
+            </div>
+            <div class="time-box">
+                <span id="minutes">00</span>
+                <p>Menit</p>
+            </div>
+            <div class="time-box">
+                <span id="seconds">00</span>
+                <p>Detik</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2 class="title-gold">Lokasi Acara 📍</h2>
+        <p>Grand Ballroom, The Ritz-Carlton Jakarta</p>
+        <div class="map-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m12!1m3!1d3966.277!2d106.824!3d-6.227!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f3e4!2sThe%20Ritz-Carlton%20Jakarta!5e0!3m2!1sid!2sid!4v1700000000000" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+    </section>
+
+    <section class="section bg-white">
+        <h2 class="title-gold">Konfirmasi Kehadiran</h2>
+        <div class="rsvp-card">
+            <div class="form-group">
+                <label>Nama Lengkap</label>
+                <input type="text" id="nama" class="form-control" placeholder="Nama Anda, Bos-Tuan Besar">
+            </div>
+            <div class="form-group">
+                <label>Pesan & Doa</label>
+                <textarea id="pesan" class="form-control" rows="4" placeholder="Tuliskan harapan terbaik Anda..."></textarea>
+            </div>
+            <button onclick="kirimWA()" class="btn-mewah">Kirim via WhatsApp 💰</button>
+        </div>
+
+        <div class="qr-box">
+            <p>Scan untuk akses cepat:</p>
+            <div id="qrcode"></div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        © 2026 Digital Invitation by CodingX Indonet 💼
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
